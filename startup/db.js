@@ -2,12 +2,14 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 
 module.exports = function () {
-  let db
-  if (process.env.NODE_ENV === 'development') {
-    db = process.env.DATABASE
-  } else {
-    db = process.env.DATABASE
-  }
+  // let db
+  // if (process.env.NODE_ENV === 'development') {
+  //   db = process.env.DATABASE_LOCAL
+  // } else {
+  //   db = process.env.DATABASE
+  // }
+
+  const db = process.env.DATABASE_LOCAL
   mongoose
     .connect(
       db,
